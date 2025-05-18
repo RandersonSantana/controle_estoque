@@ -1,4 +1,4 @@
-package com.controle.estoque.Entities;
+package com.controle.estoque.entities;
 
 import jakarta.persistence.*;
 

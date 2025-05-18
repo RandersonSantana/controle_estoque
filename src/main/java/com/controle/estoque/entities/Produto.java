@@ -1,4 +1,4 @@
-package com.controle.estoque.Entities;
+package com.controle.estoque.entities;
 
 import jakarta.persistence.*;
 
@@ -16,6 +16,9 @@ public class Produto {
     @Column(columnDefinition = "TEXT")
     private String descricao;
 
+    @Column(name = "quantidade_atual")
+    private String quantidadeAtual;
+
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
@@ -24,8 +27,6 @@ public class Produto {
     @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;
 
-    @Column(name = "quantidade_atual")
-    private String quantidadeAtual;
 
     public Produto() {
     }

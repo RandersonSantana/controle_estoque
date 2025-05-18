@@ -1,8 +1,7 @@
-package com.controle.estoque.Entities;
+package com.controle.estoque.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.Objects;
 

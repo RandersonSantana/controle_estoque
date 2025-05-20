@@ -20,7 +20,7 @@ public class Categoria {
         public Categoria() {
     }
 
-    public Categoria(Long id, String nome, List<Produto> produtos) {
+    public Categoria(Long id, String nome) {
         this.id = id;
         this.nome = nome;
         this.produtos = produtos;

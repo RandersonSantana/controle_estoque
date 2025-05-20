@@ -3,6 +3,7 @@ package com.controle.estoque.dtos;
 import java.util.List;
 
 public class CategoriaDTO {
+
     private Long id;
     private String nome;
 

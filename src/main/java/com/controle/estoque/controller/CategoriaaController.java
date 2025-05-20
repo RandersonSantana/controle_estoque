@@ -1,9 +1,12 @@
 package com.controle.estoque.controller;
 
 import com.controle.estoque.dtos.CategoriaDTO;
+import com.controle.estoque.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/categorias")
@@ -16,7 +19,7 @@ public class CategoriaaController {
         return ResponseEntity.ok(categoriaService.buscarCategoriaPorId(id));
     }
     @GetMapping
-    public ResponseEntity<CategoriaDTO> buscarTodasCategorias(){
+    public ResponseEntity<List<CategoriaDTO>> buscarTodasCategorias(){
         return ResponseEntity.ok(categoriaService.buscarTodasCategorias());
     }
     @PostMapping

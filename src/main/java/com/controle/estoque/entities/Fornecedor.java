@@ -18,7 +18,7 @@ public class Fornecedor {
 
     private String telefone;
 
-    @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Produto> produtos;
 
     public Fornecedor() {

@@ -14,7 +14,7 @@ public class Categoria {
 
     private String nome;
 
-    @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Produto> produtos;
 
         public Categoria() {
@@ -23,7 +23,6 @@ public class Categoria {
     public Categoria(Long id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.produtos = produtos;
     }
 
     public Long getId() {
@@ -42,25 +41,17 @@ public class Categoria {
         this.nome = nome;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
-    }
-
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Categoria categoria = (Categoria) o;
-        return Objects.equals(id, categoria.id) && Objects.equals(nome, categoria.nome) && Objects.equals(produtos, categoria.produtos);
+        return Objects.equals(id, categoria.id) && Objects.equals(nome, categoria.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, produtos);
+        return Objects.hash(id, nome);
     }
 }
 

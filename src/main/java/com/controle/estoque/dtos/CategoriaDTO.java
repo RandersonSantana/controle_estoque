@@ -6,6 +6,7 @@ public class CategoriaDTO {
 
     private Long id;
     private String nome;
+    private List<ProdutoDTO> produtos;
 
     public CategoriaDTO() {
     }
